@@ -22,7 +22,7 @@ class PostsTableSeeder extends Seeder
 
         for($i=1;$i<=10;$i++)
         {
-            $image= "Post_image_".rand(1,5).".jpg";
+            $image= "Post_Image_".rand(1,5).".jpg";
             $date=date("Y-m-d H:i:s",strtotime("2019-02-15 08:00:00 +{$i} days"));
             $posts[]=[
                 'author_id'=>rand(1,3),
