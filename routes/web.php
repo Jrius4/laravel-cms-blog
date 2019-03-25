@@ -14,6 +14,7 @@
 
 Route::get('/', [
     'uses'=>'BlogController@index',
+    'as'=>'blog'
     ]);
 
 
