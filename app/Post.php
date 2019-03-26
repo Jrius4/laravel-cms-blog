@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use App\Category;
 
 class Post extends Model
 {
@@ -15,6 +16,11 @@ class Post extends Model
     public function author(){
         return $this -> belongsTo(User::class);
         
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 
     public function getImageUrlAttribute($value)
