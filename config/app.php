@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -139,6 +140,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -177,6 +179,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
     ],
 
