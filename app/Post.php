@@ -52,10 +52,12 @@ class Post extends Model
 
     public function scopeLatestFirst($query)
     {
-        return $query->orderBy('created_at','desc');
+        return $query->orderBy('published_at','desc');
     }
     public function scopePublished($query)
     {
        return $query->where("published_at", "<=", Carbon::now());
     }
+
+    
 }

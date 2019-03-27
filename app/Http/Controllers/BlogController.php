@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\User;
 
 class BlogController extends Controller
 {
@@ -34,5 +35,16 @@ class BlogController extends Controller
     public function show(Post $post)
     {
         return view("blog.show", compact('post'));
+    }
+
+    public function author(User $author)
+    {
+        $authorName = $author->name;
+        $posts = $author->posts()
+            ->with('category')
+            ->latestFirst()
+            ->published()
+            ->simplePaginate($this->limit);
+        return view("blog.index", compact('posts', 'authorName'));
     }
 }
