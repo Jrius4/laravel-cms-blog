@@ -40,11 +40,11 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a class="btn btn-default btn-flat"  href="{{ route('logout') }}"
+                  <a class="btn btn-default btn-flat"  href="{{ asset('logout') }}"
                   onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{__('Sign out')}}</a>
 
-<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+<form id="logout-form" action="{{ asset('logout') }}" method="POST" style="display: none;">
   @csrf
 </form>
                 </div>
